@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Server Hostname - Fire Fire Ma</title>
+  <title>Server Hostname - Coolie Power House</title>
   <style>
     body {
       display: flex;
