@@ -1,3 +1,3 @@
-[web]
-34.100.155.218 ansible_user=ubuntu ansible_ssh_private_key_file=/var/lib/jenkins/.ssh/id_rsa
-34.100.245.47 ansible_user=ubuntu ansible_ssh_private_key_file=/var/lib/jenkins/.ssh/id_rsa
+[webservers]
+10.160.0.25 ansible_user=ubuntu
+10.160.0.26 ansible_user=ubuntu
