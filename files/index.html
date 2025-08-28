@@ -2,40 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Server Hostname - Co Co Coo Coolie Power House Eh!</title>
+  <title>One Piece × Naruto | Animatic Tribute</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      margin: 0;
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
-    .hostname {
-      font-size: 4rem;
-      font-weight: bold;
-      background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff);
-      background-size: 400% 400%;
+
+    h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #ff6b6b, #f7b733, #6bcb77, #4d96ff);
+      background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradientMove 8s ease infinite;
+      animation: gradientMove 6s ease infinite;
+      margin-bottom: 1rem;
     }
+
+    .characters {
+      font-size: 1.5rem;
+      animation: pulse 2s infinite;
+    }
+
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    @keyframes pulse {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
-<!--  <div class="hostname">-->
-<!--    <!--#echo var="HTTP_HOST" -->-->
-<!--  </div>-->
-<div class="hostname">
-  apache-mig-v203
-</div>
+  <div class="container">
+    <h1>One Piece × Naruto</h1>
+    <div class="characters">
+      <p>🔥 Monkey D. Luffy meets Uzumaki Naruto</p>
+      <p>⚔️ Pirate King vs Hokage Dream</p>
+      <p>🌊 Adventure, Brotherhood, and Battle!</p>
+    </div>
+  </div>
+  <footer>
+    Tribute by Abdul Kalam Azad | Powered by Apache
+  </footer>
 </body>
-</html>
