@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cricket × Football Legends</title>
+  <title>MMA Legends | Octagon Icons</title>
   <style>
     body {
       margin: 0;
+      background: radial-gradient(circle at center, #000 0%, #111 100%);
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
       color: #fff;
+      overflow-x: hidden;
     }
 
     .header {
       text-align: center;
       padding: 2rem;
-      font-size: 2.5rem;
-      background: linear-gradient(90deg, #ff6b6b, #f7b733, #6bcb77, #4d96ff);
+      font-size: 3rem;
+      background: linear-gradient(90deg, #ff0000, #ff9900, #00ffcc, #0066ff);
       background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradientMove 8s ease infinite;
+      animation: pulseText 6s ease infinite;
     }
 
-    .legend-grid {
+    .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -30,26 +31,31 @@
       padding: 2rem;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.1);
+    .fighter {
+      background: rgba(255, 255, 255, 0.05);
       border-radius: 10px;
-      overflow: hidden;
       width: 250px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      box-shadow: 0 0 15px rgba(255,0,0,0.3);
+      transition: transform 0.3s ease;
     }
 
-    .card img {
+    .fighter:hover {
+      transform: scale(1.05);
+    }
+
+    .fighter img {
       width: 100%;
       height: auto;
+      border-bottom: 2px solid #ff0000;
     }
 
-    .card h3 {
+    .fighter h3 {
       margin: 0.5rem 0;
       font-size: 1.2rem;
     }
 
-    @keyframes gradientMove {
+    @keyframes pulseText {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -59,36 +65,32 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #ccc;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="header">Cricket × Football Legends</div>
-  <div class="legend-grid">
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Sachin_Tendulkar.jpg" alt="Sachin Tendulkar">
-      <h3>Sachin Tendulkar</h3>
+  <div class="header">MMA Legends | Octagon Icons</div>
+  <div class="grid">
+    <div class="fighter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Georges_St-Pierre_2013.jpg" alt="Georges St-Pierre">
+      <h3>Georges St-Pierre</h3>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/MS_Dhoni.jpg" alt="MS Dhoni">
-      <h3>MS Dhoni</h3>
+    <div class="fighter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Anderson_Silva.jpg" alt="Anderson Silva">
+      <h3>Anderson Silva</h3>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Virat_Kohli.jpg" alt="Virat Kohli">
-      <h3>Virat Kohli</h3>
+    <div class="fighter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Khabib_Nurmagomedov.jpg" alt="Khabib Nurmagomedov">
+      <h3>Khabib Nurmagomedov</h3>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg" alt="Lionel Messi">
-      <h3>Lionel Messi</h3>
+    <div class="fighter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Jon_Jones_2017.jpg" alt="Jon Jones">
+      <h3>Jon Jones</h3>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo">
-      <h3>Cristiano Ronaldo</h3>
-    </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Zinedine_Zidane_2013.jpg" alt="Zinedine Zidane">
-      <h3>Zinedine Zidane</h3>
+    <div class="fighter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Amanda_Nunes_2016.jpg" alt="Amanda Nunes">
+      <h3>Amanda Nunes</h3>
     </div>
   </div>
   <footer>Tribute by Abdul Kalam Azad | Powered by Apache</footer>
