@@ -2,95 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MMA Legends | Octagon Icons</title>
+  <title>Cricket Legends | Tribute</title>
   <style>
     body {
       margin: 0;
-      background: radial-gradient(circle at center, #000 0%, #111 100%);
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      overflow-x: hidden;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Sachin_Tendulkar.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(0px);
     }
 
-    .header {
-      text-align: center;
-      padding: 2rem;
-      font-size: 3rem;
-      background: linear-gradient(90deg, #ff0000, #ff9900, #00ffcc, #0066ff);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: pulseText 6s ease infinite;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
     }
 
-    .grid {
+    .container {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
       padding: 2rem;
+      color: #fff;
     }
 
-    .fighter {
-      background: rgba(255, 255, 255, 0.05);
+    .card {
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 10px;
+      margin: 1rem;
       width: 250px;
       text-align: center;
-      box-shadow: 0 0 15px rgba(255,0,0,0.3);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
       transition: transform 0.3s ease;
+      animation: fadeIn 1s ease forwards;
     }
 
-    .fighter:hover {
+    .card:hover {
       transform: scale(1.05);
     }
 
-    .fighter img {
+    .card img {
       width: 100%;
       height: auto;
-      border-bottom: 2px solid #ff0000;
+      border-bottom: 2px solid #fff;
     }
 
-    .fighter h3 {
+    .card h3 {
       margin: 0.5rem 0;
       font-size: 1.2rem;
     }
 
-    @keyframes pulseText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .card p {
+      font-size: 0.9rem;
+      padding: 0 1rem 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      color: #fff;
+      z-index: 1;
+      position: relative;
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
     }
 
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #ccc;
+      z-index: 1;
+      position: relative;
     }
   </style>
 </head>
 <body>
-  <div class="header">MMA Legends | Octagon Icons</div>
-  <div class="grid">
-    <div class="fighter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Georges_St-Pierre_2013.jpg" alt="Georges St-Pierre">
-      <h3>Georges St-Pierre</h3>
+  <div class="overlay"></div>
+  <div class="header">Cricket Legends Tribute</div>
+  <div class="container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Sachin_Tendulkar.jpg" alt="Sachin Tendulkar">
+      <h3>Sachin Tendulkar</h3>
+      <p>The Master Blaster. Most runs in international cricket. Revered across generations.</p>
     </div>
-    <div class="fighter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Anderson_Silva.jpg" alt="Anderson Silva">
-      <h3>Anderson Silva</h3>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/MS_Dhoni.jpg" alt="MS Dhoni">
+      <h3>MS Dhoni</h3>
+      <p>Captain Cool. Led India to World Cup glory in 2007 and 2011. A finisher like no other.</p>
     </div>
-    <div class="fighter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Khabib_Nurmagomedov.jpg" alt="Khabib Nurmagomedov">
-      <h3>Khabib Nurmagomedov</h3>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Virat_Kohli.jpg" alt="Virat Kohli">
+      <h3>Virat Kohli</h3>
+      <p>Modern-day run machine. Known for his aggression, consistency, and fitness.</p>
     </div>
-    <div class="fighter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Jon_Jones_2017.jpg" alt="Jon Jones">
-      <h3>Jon Jones</h3>
-    </div>
-    <div class="fighter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Amanda_Nunes_2016.jpg" alt="Amanda Nunes">
-      <h3>Amanda Nunes</h3>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo">
+      <h3>Bonus: Ronaldo</h3>
+      <p>Not a cricketer—but a legend in his own right. Because greatness transcends sports.</p>
     </div>
   </div>
   <footer>Tribute by Abdul Kalam Azad | Powered by Apache</footer>
